@@ -63,7 +63,7 @@
     <!-- Top Urgency Banner with Countdown -->
     <div class="bg-brand-600 text-white text-xs font-semibold py-2 px-4 text-center flex items-center justify-center space-x-2 shadow-inner">
         <i data-lucide="clock" class="w-4 h-4 animate-spin"></i>
-        <span data-translate-key="bannerText">Cupos de evaluación prioritaria semanal cerrando en:</span>
+        <span data-translate-key="urgencyBanner">Cupos de evaluación prioritaria semanal cerrando en:</span>
         <span id="countdownTimer" class="bg-brand-900 px-2 py-0.5 rounded font-mono font-bold tracking-wider">48:00:00</span>
     </div>
 
@@ -76,25 +76,25 @@
                 </div>
                 <div>
                     <span class="text-xl font-extrabold tracking-tight text-navy-900">Debt<span class="text-brand-600">Solutions</span></span>
-                    <span class="block text-[10px] uppercase tracking-widest font-semibold text-slate-500" data-translate-key="navSubtitle">Asesoría Legal y Financiera</span>
+                    <span class="block text-[10px] uppercase tracking-widest font-semibold text-slate-500" data-translate-key="subBrand">Asesoría Legal y Financiera</span>
                 </div>
             </div>
             
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
                 <a href="#calculadora" class="hover:text-brand-600 transition-colors" data-translate-key="navCalc">Calculadora</a>
                 <a href="#programas" class="hover:text-brand-600 transition-colors" data-translate-key="navPrograms">Programas</a>
-                <a href="#testimonios" class="hover:text-brand-600 transition-colors" data-translate-key="navReviews">Casos de Éxito</a>
+                <a href="#testimonios" class="hover:text-brand-600 transition-colors" data-translate-key="navSuccess">Casos de Éxito</a>
                 <a href="#faq" class="hover:text-brand-600 transition-colors" data-translate-key="navFaq">Preguntas Frecuentes</a>
                 <button onclick="openLegalModal()" class="text-slate-600 hover:text-brand-600 transition-colors" data-translate-key="navLegal">Cumplimiento Legal</button>
             </nav>
 
             <div class="flex items-center space-x-4">
-                <!-- Botón de Traducción (Español / Inglés) -->
-                <button onclick="toggleLanguage()" class="flex items-center space-x-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3.5 py-2 rounded-xl border border-slate-200 transition-all">
+                <!-- Language Toggle Button -->
+                <button onclick="toggleLanguage()" class="flex items-center space-x-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 transition-all">
                     <i data-lucide="globe" class="w-4 h-4 text-brand-600"></i>
                     <span id="langBtnText">EN / ES</span>
                 </button>
-                <a href="#consulta" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-md shadow-brand-600/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0" data-translate-key="navCta">
+                <a href="#consulta" class="hidden sm:inline-block bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-md shadow-brand-600/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0" data-translate-key="navCta">
                     Consulta Gratuita
                 </a>
             </div>
@@ -114,7 +114,8 @@
                     </div>
                     
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-center lg:text-left">
-                        <span class="bg-brand-500 text-slate-900 px-4 py-2 rounded-2xl inline-block shadow-lg text-center" data-translate-key="heroTitle1">Reestructura tus Deudas</span> <span class="block mt-2" data-translate-key="heroTitle2">con Asesoría Experta</span>
+                        <span class="bg-brand-500 text-slate-900 px-4 py-2 rounded-2xl inline-block shadow-lg text-center" data-translate-key="heroTitle1">Reestructura tus Deudas</span> 
+                        <span class="block mt-2" data-translate-key="heroTitle2">con Asesoría Experta</span>
                     </h1>
                     
                     <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed" data-translate-key="heroDesc">
@@ -123,12 +124,12 @@
                     
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                         <a href="#consulta" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-500/30 transition-all transform hover:-translate-y-1 flex items-center justify-center space-x-2 text-base">
-                            <span data-translate-key="heroBtn1">Verificar Mi Elegibilidad</span>
+                            <span data-translate-key="heroCta1">Verificar Mi Elegibilidad</span>
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
                         <button onclick="openInteractiveModal()" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-8 py-4 rounded-xl transition-all transform hover:-translate-y-1 flex items-center justify-center space-x-2">
                             <i data-lucide="zap" class="w-4 h-4 text-brand-400 animate-pulse"></i>
-                            <span data-translate-key="heroBtn2">Simular Validación Interactiva</span>
+                            <span data-translate-key="heroCta2">Simular Validación Interactiva</span>
                         </button>
                     </div>
                     
@@ -154,7 +155,7 @@
                         <div class="text-center mb-4">
                             <span class="text-[11px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-3 py-1 rounded-full" data-translate-key="formBadge">Admisión Confidencial</span>
                             <h3 class="text-xl font-extrabold text-slate-900 mt-2" data-translate-key="formTitle">Solicita tu Análisis Gratuito</h3>
-                            <p class="text-xs text-slate-500 mt-0.5" data-translate-key="formSubtitle">Toma menos de 1 minuto. Cero impacto en tu crédito.</p>
+                            <p class="text-xs text-slate-500 mt-0.5" data-translate-key="formSub">Toma menos de 1 minuto. Cero impacto en tu crédito.</p>
                         </div>
                         <iframe data-tally-src="https://tally.so/r/2EQDqg?transparentBackground=1" loading="lazy" width="100%" height="440" frameborder="0" marginheight="0" marginwidth="0" title="Debt Solutions Intake"></iframe>
                     </div>
@@ -194,7 +195,7 @@
             <div class="text-center mb-12">
                 <span class="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-100 px-3 py-1 rounded-full" data-translate-key="calcBadge">Simulador Financiero</span>
                 <h2 class="text-3xl font-extrabold text-navy-900 mt-3" data-translate-key="calcTitle">Calculadora de Ahorros</h2>
-                <p class="text-slate-600 mt-2 max-w-xl mx-auto" data-translate-key="calcSubtitle">Ajusta los valores para visualizar tu nueva cuota mensual estimada mediante nuestros programas.</p>
+                <p class="text-slate-600 mt-2 max-w-xl mx-auto" data-translate-key="calcSub">Ajusta los valores para visualizar tu nueva cuota mensual estimada mediante nuestros programas.</p>
             </div>
 
             <div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-6 sm:p-10">
@@ -204,7 +205,7 @@
                     <div class="space-y-8">
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <label class="text-sm font-bold text-slate-700" data-translate-key="calcLabel1">Deuda No Asegurada Total</label>
+                                <label class="text-sm font-bold text-slate-700" data-translate-key="labelDebt">Deuda No Asegurada Total</label>
                                 <span id="debtValDisplay" class="text-xl font-extrabold text-brand-600">$45,000</span>
                             </div>
                             <input type="range" id="debtSlider" min="10000" max="150000" step="5000" value="45000" oninput="updateCalculator()" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600">
@@ -216,7 +217,7 @@
 
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <label class="text-sm font-bold text-slate-700" data-translate-key="calcLabel2">Pago Mensual Actual Estimado</label>
+                                <label class="text-sm font-bold text-slate-700" data-translate-key="labelCurrentPay">Pago Mensual Actual Estimado</label>
                                 <span id="currentPayDisplay" class="text-xl font-extrabold text-slate-800">$1,125</span>
                             </div>
                             <input type="range" id="paymentSlider" min="200" max="4000" step="100" value="1125" oninput="updateCalculator()" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-600">
@@ -227,7 +228,7 @@
                         </div>
 
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2" data-translate-key="calcLabel3">Situación Financiera Principal</label>
+                            <label class="block text-sm font-bold text-slate-700 mb-2" data-translate-key="labelHardship">Situación Financiera Principal</label>
                             <select id="hardshipSelect" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium text-slate-700 focus:outline-none focus:border-brand-500">
                                 <option value="interest" data-translate-key="opt1">Altas tasas de interés en tarjetas</option>
                                 <option value="income" data-translate-key="opt2">Reducción temporal de ingresos</option>
@@ -240,24 +241,24 @@
                     <!-- Results Column -->
                     <div class="bg-gradient-to-br from-navy-900 to-slate-800 text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-inner transform transition-all duration-300 hover:scale-[1.01]">
                         <div>
-                            <span class="text-xs uppercase tracking-widest text-brand-400 font-bold" data-translate-key="resBadge">Proyección Estimada</span>
+                            <span class="text-xs uppercase tracking-widest text-brand-400 font-bold" data-translate-key="resHeader">Proyección Estimada</span>
                             <h4 class="text-xl font-bold mt-1 text-white">Plan Debt Solutions</h4>
                             
                             <div class="mt-6 space-y-4">
                                 <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/10">
                                     <p class="text-xs text-slate-300" data-translate-key="resNewPay">Nuevo Pago Mensual Estimado</p>
                                     <p id="newPayDisplay" class="text-3xl font-extrabold text-brand-400 mt-1">$562 <span class="text-xs font-normal text-slate-300">/mes</span></p>
-                                    <p class="text-[11px] text-emerald-300 mt-1 font-medium"><span data-translate-key="resSaveText">Ahorro aprox. de</span> <span id="monthlySaveDisplay">$563</span> <span data-translate-key="resSaveMonth">mensuales</span>.</p>
+                                    <p class="text-[11px] text-emerald-300 mt-1 font-medium"><span data-translate-key="resSaveText">Ahorro aprox. de</span> <span id="monthlySaveDisplay">$563</span> <span data-translate-key="resMonthly">mensuales</span>.</p>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-4">
                                     <div class="bg-white/5 rounded-xl p-3 border border-white/5">
-                                        <p class="text-[11px] text-slate-300" data-translate-key="resReduct">Reducción de Saldo</p>
-                                        <p class="text-lg font-bold text-white mt-0.5" data-translate-key="resReductVal">Hasta 50%</p>
+                                        <p class="text-[11px] text-slate-300" data-translate-key="resRed">Reducción de Saldo</p>
+                                        <p class="text-lg font-bold text-white mt-0.5" data-translate-key="resRedVal">Hasta 50%</p>
                                     </div>
                                     <div class="bg-white/5 rounded-xl p-3 border border-white/5">
-                                        <p class="text-[11px] text-slate-300" data-translate-key="resTerm">Plazo Estimado</p>
-                                        <p class="text-lg font-bold text-white mt-0.5" data-translate-key="resTermVal">24 - 48 Meses</p>
+                                        <p class="text-[11px] text-slate-300" data-translate-key="resTime">Plazo Estimado</p>
+                                        <p class="text-lg font-bold text-white mt-0.5" data-translate-key="resTimeVal">24 - 48 Meses</p>
                                     </div>
                                 </div>
                             </div>
@@ -282,7 +283,7 @@
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-3 py-1 rounded-full" data-translate-key="progBadge">Nuestros Programas</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3" data-translate-key="progTitle">Soluciones Especializadas para Cada Caso</h2>
-                <p class="text-slate-600 mt-3" data-translate-key="progSubtitle">Negociamos de manera directa con tus acreedores para congelar intereses y liquidar saldos de forma ventajosa.</p>
+                <p class="text-slate-600 mt-3" data-translate-key="progSub">Negociamos de manera directa con tus acreedores para congelar intereses y liquidar saldos de forma ventajosa.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
@@ -382,9 +383,9 @@
     <section id="testimonios" class="py-20 bg-slate-100" data-aos="fade-up" data-aos-duration="1000">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-100 px-3 py-1 rounded-full" data-translate-key="revBadge">Casos de Éxito</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3" data-translate-key="revTitle">Historias Reales de Estabilidad</h2>
-                <p class="text-slate-600 mt-3" data-translate-key="revSubtitle">Conoce cómo nuestros clientes eliminaron decenas de miles en deudas y recuperaron su tranquilidad.</p>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-100 px-3 py-1 rounded-full" data-translate-key="testBadge">Casos de Éxito</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3" data-translate-key="testTitle">Historias Reales de Estabilidad</h2>
+                <p class="text-slate-600 mt-3" data-translate-key="testSub">Conoce cómo nuestros clientes eliminaron decenas de miles en deudas y recuperaron su tranquilidad.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
@@ -398,7 +399,7 @@
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                         </div>
-                        <p class="text-slate-700 text-sm leading-relaxed italic" data-translate-key="rev1Text">
+                        <p class="text-slate-700 text-sm leading-relaxed italic" data-translate-key="test1Text">
                             "Estaba ahogado en más de $55,000 en tarjetas y cuentas médicas. Debt Solutions estructuró un plan que redujo mis pagos a la mitad. Excelente trato humano."
                         </p>
                     </div>
@@ -406,7 +407,7 @@
                         <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm">MR</div>
                         <div>
                             <p class="text-sm font-bold text-navy-900">Marcos Ramos</p>
-                            <p class="text-xs text-slate-500" data-translate-key="rev1Sub">Ahorró $31,000 • Puerto Rico</p>
+                            <p class="text-xs text-slate-500" data-translate-key="test1Sub">Ahorró $31,000 • Puerto Rico</p>
                         </div>
                     </div>
                 </div>
@@ -420,7 +421,7 @@
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                         </div>
-                        <p class="text-slate-700 text-sm leading-relaxed italic" data-translate-key="rev2Text">
+                        <p class="text-slate-700 text-sm leading-relaxed italic" data-translate-key="test2Text">
                             "La asesoría fue impecable y sin juicios de valor. Las llamadas de cobro cesaron rápidamente y hoy veo la luz al final del túnel de forma organizada."
                         </p>
                     </div>
@@ -428,7 +429,7 @@
                         <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm">SL</div>
                         <div>
                             <p class="text-sm font-bold text-navy-900">Sandra López</p>
-                            <p class="text-xs text-slate-500" data-translate-key="rev2Sub">Ahorró $24,500 • Florida</p>
+                            <p class="text-xs text-slate-500" data-translate-key="test2Sub">Ahorró $24,500 • Florida</p>
                         </div>
                     </div>
                 </div>
@@ -442,7 +443,7 @@
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                         </div>
-                        <p class="text-slate-700 text-sm leading-relaxed italic" data-translate-key="rev3Text">
+                        <p class="text-slate-700 text-sm leading-relaxed italic" data-translate-key="test3Text">
                             "Recomiendo sus servicios ampliamente. Profesionalismo absoluto y un equipo comprometido con sacarte de deudas de la manera más justa."
                         </p>
                     </div>
@@ -450,7 +451,7 @@
                         <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm">DP</div>
                         <div>
                             <p class="text-sm font-bold text-navy-900">Daniel Pérez</p>
-                            <p class="text-xs text-slate-500" data-translate-key="rev3Sub">Ahorró $42,000 • California</p>
+                            <p class="text-xs text-slate-500" data-translate-key="test3Sub">Ahorró $42,000 • California</p>
                         </div>
                     </div>
                 </div>
@@ -463,12 +464,13 @@
     <section id="consulta" class="py-20 gradient-bg text-white relative" data-aos="fade-up" data-aos-duration="1000">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-12">
-                <span class="text-xs font-bold uppercase tracking-wider text-brand-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700" data-translate-key="evalBadge">Admisión 100% Confidencial</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mt-3" data-translate-key="evalTitle">Comienza Tu Proceso de Evaluación</h2>
-                <p class="text-slate-300 mt-2 max-w-xl mx-auto" data-translate-key="evalSubtitle">Completa el formulario oficial de admisión para que nuestro equipo analice tu caso de forma privada.</p>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700" data-translate-key="secBadge">Admisión 100% Confidencial</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-3" data-translate-key="secTitle">Comienza Tu Proceso de Evaluación</h2>
+                <p class="text-slate-300 mt-2 max-w-xl mx-auto" data-translate-key="secSub">Completa el formulario oficial de admisión para que nuestro equipo analice tu caso de forma privada.</p>
             </div>
 
             <div class="bg-white text-slate-800 rounded-3xl shadow-2xl p-6 sm:p-10 transform transition-all hover:scale-[1.01]">
+                <!-- Tally Embed Script initialized via data-tally-src -->
                 <iframe data-tally-src="https://tally.so/r/2EQDqg?transparentBackground=1" loading="lazy" width="100%" height="550" frameborder="0" marginheight="0" marginwidth="0" title="Debt Solutions Intake"></iframe>
             </div>
         </div>
@@ -480,10 +482,10 @@
             <div class="text-center mb-12">
                 <span class="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-3 py-1 rounded-full" data-translate-key="faqBadge">Dudas Comunes</span>
                 <h2 class="text-3xl font-extrabold text-navy-900 mt-3" data-translate-key="faqTitle">Preguntas Frecuentes</h2>
-                <p class="text-slate-600 mt-2" data-translate-key="faqSubtitle">Busca términos o revisa respuestas claras sobre nuestros procesos de mediación.</p>
+                <p class="text-slate-600 mt-2" data-translate-key="faqSub">Busca términos o revisa respuestas claras sobre nuestros procesos de mediación.</p>
                 
                 <div class="mt-6 max-w-md mx-auto">
-                    <input type="text" id="faqSearch" onkeyup="filterFaq()" placeholder="Buscar pregunta (ej. crédito, costo, deudas)..." data-translate-placeholder="faqPlaceholder" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-700 focus:outline-none focus:border-brand-500 shadow-sm transition-all focus:ring-2 focus:ring-brand-500/20">
+                    <input type="text" id="faqSearch" onkeyup="filterFaq()" placeholder="Buscar pregunta (ej. crédito, costo, deudas)..." data-translate-key="faqPlaceholder" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-700 focus:outline-none focus:border-brand-500 shadow-sm transition-all focus:ring-2 focus:ring-brand-500/20">
                 </div>
             </div>
 
@@ -526,7 +528,7 @@
     <!-- Footer -->
     <footer class="bg-navy-900 text-slate-400 py-16 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-slate-800">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pb-12 border-b border-slate-800">
                 <div class="space-y-4 md:col-span-1">
                     <div class="flex items-center space-x-3">
                         <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xs">
@@ -540,12 +542,12 @@
                 </div>
 
                 <div>
-                    <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-4" data-translate-key="footerProg">Programas</h4>
+                    <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-4" data-translate-key="footerPrograms">Programas</h4>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="#programas" class="hover:text-white transition-colors" data-translate-key="card1Title">Mediación y Liquidación</a></li>
-                        <li><a href="#programas" class="hover:text-white transition-colors" data-translate-key="card2Title">Consolidación Estructurada</a></li>
-                        <li><a href="#programas" class="hover:text-white transition-colors" data-translate-key="card3Title">Defensa por Dificultad</a></li>
-                        <li><a href="#calculadora" class="hover:text-white transition-colors" data-translate-key="calcBadge">Simulador de Ahorros</a></li>
+                        <li><a href="#programas" class="hover:text-white transition-colors" data-translate-key="prog1">Mediación y Liquidación</a></li>
+                        <li><a href="#programas" class="hover:text-white transition-colors" data-translate-key="prog2">Consolidación Estructurada</a></li>
+                        <li><a href="#programas" class="hover:text-white transition-colors" data-translate-key="prog3">Defensa por Dificultad</a></li>
+                        <li><a href="#calculadora" class="hover:text-white transition-colors" data-translate-key="prog4">Simulador de Ahorros</a></li>
                     </ul>
                 </div>
 
@@ -564,16 +566,16 @@
                 <p data-translate-key="footerNotice">
                     Aviso legal: Debt Solutions es un servicio de consulta, asesoría financiera y mediación de deudas. Los resultados varían según la situación particular del cliente, el volumen total de adeudos y la cooperación de los acreedores institucionales. No asumimos obligaciones directas ni prestamos servicios de representación legal en tribunales.
                 </p>
-                <p>&copy; 2026 Debt Solutions. <span data-translate-key="footerRights">Todos los derechos reservados.</span> <button onclick="openLegalModal()" class="text-brand-400 underline hover:text-brand-300" data-translate-key="footerLegalLink">Políticas de Privacidad y Cumplimiento</button></p>
+                <p>&copy; 2026 Debt Solutions. <span data-translate-key="footerRights">Todos los derechos reservados.</span> <button onclick="openLegalModal()" class="text-brand-400 underline hover:text-brand-300" data-translate-key="footerPrivacy">Políticas de Privacidad y Cumplimiento</button></p>
             </div>
         </div>
     </footer>
 
     <!-- Sticky Mobile CTA Bar -->
     <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur-md border-t border-slate-800 p-3 flex items-center justify-center shadow-2xl">
-        <a href="#consulta" class="flex items-center justify-center space-x-1.5 bg-brand-600 text-white px-4 py-2.5 rounded-xl font-bold text-xs w-full shadow-lg shadow-brand-600/30 transition-transform active:scale-95">
+        <a href="#consulta" class="flex items-center justify-center space-x-1.5 bg-brand-600 text-white px-6 py-2.5 rounded-xl font-bold text-xs w-full shadow-lg shadow-brand-600/30 transition-transform active:scale-95">
             <i data-lucide="calendar" class="w-4 h-4"></i>
-            <span data-translate-key="navCta">Consulta Gratuita</span>
+            <span data-translate-key="mobileCta">Consulta Gratuita</span>
         </a>
     </div>
 
@@ -586,19 +588,19 @@
                     <i data-lucide="check-circle" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-2xl font-bold text-navy-900" data-translate-key="modalTitle">Validación de Perfil Exprés</h3>
-                <p class="text-xs text-slate-500" data-translate-key="modalSubtitle">Simulación interactiva de precalificación para Debt Solutions.</p>
+                <p class="text-xs text-slate-500" data-translate-key="modalSub">Simulación interactiva de precalificación para Debt Solutions.</p>
             </div>
             
             <div class="space-y-4">
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1" data-translate-key="modalLabel1">Monto Estimado de Deuda</label>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1" data-translate-key="modalLbl1">Monto Estimado de Deuda</label>
                     <select id="modalDebt" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium text-slate-700 focus:outline-none focus:border-brand-500">
                         <option value="25000">$25,000 - $50,000</option>
                         <option value="50000">$50,000 - $100,000+</option>
                     </select>
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1" data-translate-key="modalLabel2">Correo de Contacto</label>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1" data-translate-key="modalLbl2">Correo de Contacto</label>
                     <input type="email" id="modalEmail" placeholder="tu@correo.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium text-slate-700 focus:outline-none focus:border-brand-500">
                 </div>
                 <button onclick="simulateSuccessModal()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-brand-600/30 transition-all text-sm transform hover:-translate-y-0.5" data-translate-key="modalBtn">
@@ -615,16 +617,16 @@
     <div id="legalModal" class="hidden fixed inset-0 z-50 bg-navy-900/80 backdrop-blur-md flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl relative border border-slate-100 text-slate-800 space-y-6 max-h-[85vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-100 pb-4">
-                <h3 class="text-xl font-bold text-navy-900" data-translate-key="legalModalTitle">Políticas de Privacidad y Cumplimiento Legal</h3>
-                <button onclick="closeLegalModal()" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+                <h3 class="text-xl font-bold text-navy-900" data-translate-key="legalTitle">Políticas de Privacidad y Cumplimiento Legal</h3>
+                <button onclick="openLegalModal()" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
             </div>
-            <div class="space-y-4 text-xs text-slate-600 leading-relaxed" data-translate-key="legalModalContent">
+            <div class="space-y-4 text-xs text-slate-600 leading-relaxed" data-translate-key="legalBody">
                 <p><strong>1. Confidencialidad y Privacidad de Datos:</strong> En Debt Solutions nos comprometemos a proteger estrictamente toda la información proporcionada por nuestros clientes bajo estándares rigurosos de seguridad y normativas de confidencialidad aplicables.</p>
                 <p><strong>2. Uso de Información:</strong> Los datos recopilados a través de nuestros formularios y canales oficiales (incluyendo jpescudolegal@gmail.com) se utilizan exclusivamente para fines de análisis financiero, asesoría de mediación y estructuración de planes de alivio de deudas.</p>
                 <p><strong>3. Exención de Representación Judicial:</strong> Debt Solutions opera como un servicio especializado de asesoría, cálculo financiero y mediación extrajudicial con acreedores. No constituimos un bufete de abogados ni brindamos representación contenciosa en tribunales.</p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex justify-end">
-                <button onclick="closeLegalModal()" class="bg-slate-800 text-white px-5 py-2 rounded-xl text-xs font-semibold hover:bg-slate-700 transition-colors" data-translate-key="legalModalBtn">Entendido</button>
+                <button onclick="closeLegalModal()" class="bg-slate-800 text-white px-5 py-2 rounded-xl text-xs font-semibold hover:bg-slate-700 transition-colors" data-translate-key="legalClose">Entendido</button>
             </div>
         </div>
     </div>
@@ -638,11 +640,11 @@
         const translations = {
             es: {
                 pageTitle: "Debt Solutions - Alivio y Mediación de Deudas Profesional",
-                bannerText: "Cupos de evaluación prioritaria semanal cerrando en:",
-                navSubtitle: "Asesoría Legal y Financiera",
+                urgencyBanner: "Cupos de evaluación prioritaria semanal cerrando en:",
+                subBrand: "Asesoría Legal y Financiera",
                 navCalc: "Calculadora",
                 navPrograms: "Programas",
-                navReviews: "Casos de Éxito",
+                navSuccess: "Casos de Éxito",
                 navFaq: "Preguntas Frecuentes",
                 navLegal: "Cumplimiento Legal",
                 navCta: "Consulta Gratuita",
@@ -650,40 +652,40 @@
                 heroTitle1: "Reestructura tus Deudas",
                 heroTitle2: "con Asesoría Experta",
                 heroDesc: "Reduce tus pagos mensuales hasta en un 50%, detén el acoso de cobradores y reestructura tus deudas con un plan experto adaptado a tu presupuesto real.",
-                heroBtn1: "Verificar Mi Elegibilidad",
-                heroBtn2: "Simular Validación Interactiva",
+                heroCta1: "Verificar Mi Elegibilidad",
+                heroCta2: "Simular Validación Interactiva",
                 stat1: "Deuda Reestructurada",
                 stat2: "Familias Asistidas",
                 stat3: "Satisfacción",
                 formBadge: "Admisión Confidencial",
                 formTitle: "Solicita tu Análisis Gratuito",
-                formSubtitle: "Toma menos de 1 minuto. Cero impacto en tu crédito.",
+                formSub: "Toma menos de 1 minuto. Cero impacto en tu crédito.",
                 trust1: "Confidencialidad HIPAA",
                 trust2: "Encriptación Bancaria SSL",
                 trust3: "Asesoría Certificada",
                 trust4: "Calificación Excelente A+",
                 calcBadge: "Simulador Financiero",
                 calcTitle: "Calculadora de Ahorros",
-                calcSubtitle: "Ajusta los valores para visualizar tu nueva cuota mensual estimada mediante nuestros programas.",
-                calcLabel1: "Deuda No Asegurada Total",
-                calcLabel2: "Pago Mensual Actual Estimado",
-                calcLabel3: "Situación Financiera Principal",
+                calcSub: "Ajusta los valores para visualizar tu nueva cuota mensual estimada mediante nuestros programas.",
+                labelDebt: "Deuda No Asegurada Total",
+                labelCurrentPay: "Pago Mensual Actual Estimado",
+                labelHardship: "Situación Financiera Principal",
                 opt1: "Altas tasas de interés en tarjetas",
                 opt2: "Reducción temporal de ingresos",
                 opt3: "Acumulación de gastos médicos",
                 opt4: "Imposibilidad de cubrir pagos mínimos",
-                resBadge: "Proyección Estimada",
+                resHeader: "Proyección Estimada",
                 resNewPay: "Nuevo Pago Mensual Estimado",
                 resSaveText: "Ahorro aprox. de",
-                resSaveMonth: "mensuales",
-                resReduct: "Reducción de Saldo",
-                resReductVal: "Hasta 50%",
-                resTerm: "Plazo Estimado",
-                resTermVal: "24 - 48 Meses",
+                resMonthly: "mensuales",
+                resRed: "Reducción de Saldo",
+                resRedVal: "Hasta 50%",
+                resTime: "Plazo Estimado",
+                resTimeVal: "24 - 48 Meses",
                 resBtn: "Asegurar Esta Proyección de Ahorro",
                 progBadge: "Nuestros Programas",
                 progTitle: "Soluciones Especializadas para Cada Caso",
-                progSubtitle: "Negociamos de manera directa con tus acreedores para congelar intereses y liquidar saldos de forma ventajosa.",
+                progSub: "Negociamos de manera directa con tus acreedores para congelar intereses y liquidar saldos de forma ventajosa.",
                 card1Title: "Mediación y Liquidación",
                 card1Desc: "Acuerdos directos con acreedores para reducir el monto total adeudado por una fracción considerable.",
                 card1Li1: "Reducción real del principal",
@@ -697,21 +699,21 @@
                 card3Li1: "Resguardo y consejo especializado",
                 card3Li2: "Estrategia legal personalizada",
                 moreBtn: "Conocer más",
-                revBadge: "Casos de Éxito",
-                revTitle: "Historias Reales de Estabilidad",
-                revSubtitle: "Conoce cómo nuestros clientes eliminaron decenas de miles en deudas y recuperaron su tranquilidad.",
-                rev1Text: "\"Estaba ahogado en más de $55,000 en tarjetas y cuentas médicas. Debt Solutions estructuró un plan que redujo mis pagos a la mitad. Excelente trato humano.\"",
-                rev1Sub: "Ahorró $31,000 • Puerto Rico",
-                rev2Text: "\"La asesoría fue impecable y sin juicios de valor. Las llamadas de cobro cesaron rápidamente y hoy veo la luz al final del túnel de forma organizada.\"",
-                rev2Sub: "Ahorró $24,500 • Florida",
-                rev3Text: "\"Recomiendo sus servicios ampliamente. Profesionalismo absoluto y un equipo comprometido con sacarte de deudas de la manera más justa.\"",
-                rev3Sub: "Ahorró $42,000 • California",
-                evalBadge: "Admisión 100% Confidencial",
-                evalTitle: "Comienza Tu Proceso de Evaluación",
-                evalSubtitle: "Completa el formulario oficial de admisión para que nuestro equipo analice tu caso de forma privada.",
+                testBadge: "Casos de Éxito",
+                testTitle: "Historias Reales de Estabilidad",
+                testSub: "Conoce cómo nuestros clientes eliminaron decenas de miles en deudas y recuperaron su tranquilidad.",
+                test1Text: "\"Estaba ahogado en más de $55,000 en tarjetas y cuentas médicas. Debt Solutions estructuró un plan que redujo mis pagos a la mitad. Excelente trato humano.\"",
+                test1Sub: "Ahorró $31,000 • Puerto Rico",
+                test2Text: "\"La asesoría fue impecable y sin juicios de valor. Las llamadas de cobro cesaron rápidamente y hoy veo la luz al final del túnel de forma organizada.\"",
+                test2Sub: "Ahorró $24,500 • Florida",
+                test3Text: "\"Recomiendo sus servicios ampliamente. Profesionalismo absoluto y un equipo comprometido con sacarte de deudas de la manera más justa.\"",
+                test3Sub: "Ahorró $42,000 • California",
+                secBadge: "Admisión 100% Confidencial",
+                secTitle: "Comienza Tu Proceso de Evaluación",
+                secSub: "Completa el formulario oficial de admisión para que nuestro equipo analice tu caso de forma privada.",
                 faqBadge: "Dudas Comunes",
                 faqTitle: "Preguntas Frecuentes",
-                faqSubtitle: "Busca términos o revisa respuestas claras sobre nuestros procesos de mediación.",
+                faqSub: "Busca términos o revisa respuestas claras sobre nuestros procesos de mediación.",
                 faqPlaceholder: "Buscar pregunta (ej. crédito, costo, deudas)...",
                 faq1Q: "¿La mediación de deudas afecta mi puntaje crediticio?",
                 faq1A: "El proceso de negociación de deudas implica un acuerdo con los acreedores que puede generar un impacto temporal en el crédito, pero permite resolver compromisos financieros en una fracción del tiempo estipulado, permitiendo una recuperación sólida a futuro.",
@@ -720,160 +722,169 @@
                 faq3Q: "¿Qué tipos de deudas califican para el programa?",
                 faq3A: "Manejamos deudas no aseguradas como tarjetas de crédito, préstamos personales, líneas de crédito y facturas médicas vencidas. Las deudas con garantía (hipotecas y autos) no entran en esta categoría.",
                 footerDesc: "Ayudando a personas a recuperar su estabilidad financiera a través de asesoría experta y mediación de deudas ética y transparente.",
-                footerProg: "Programas",
+                footerPrograms: "Programas",
+                prog1: "Mediación y Liquidación",
+                prog2: "Consolidación Estructurada",
+                prog3: "Defensa por Dificultad",
+                prog4: "Simulador de Ahorros",
                 footerContact: "Contacto Profesional",
                 footerNotice: "Aviso legal: Debt Solutions es un servicio de consulta, asesoría financiera y mediación de deudas. Los resultados varían según la situación particular del cliente, el volumen total de adeudos y la cooperación de los acreedores institucionales. No asumimos obligaciones directas ni prestamos servicios de representación legal en tribunales.",
                 footerRights: "Todos los derechos reservados.",
-                footerLegalLink: "Políticas de Privacidad y Cumplimiento",
+                footerPrivacy: "Políticas de Privacidad y Cumplimiento",
+                mobileCta: "Consulta Gratuita",
                 modalTitle: "Validación de Perfil Exprés",
-                modalSubtitle: "Simulación interactiva de precalificación para Debt Solutions.",
-                modalLabel1: "Monto Estimado de Deuda",
-                modalLabel2: "Correo de Contacto",
+                modalSub: "Simulación interactiva de precalificación para Debt Solutions.",
+                modalLbl1: "Monto Estimado de Deuda",
+                modalLbl2: "Correo de Contacto",
                 modalBtn: "Validar Elegibilidad Ahora",
                 modalSuccess: "¡Perfil apto para reestructuración! Redirigiendo a admisión oficial...",
-                legalModalTitle: "Políticas de Privacidad y Cumplimiento Legal",
-                legalModalContent: "<p><strong>1. Confidencialidad y Privacidad de Datos:</strong> En Debt Solutions nos comprometemos a proteger estrictamente toda la información proporcionada por nuestros clientes bajo estándares rigurosos de seguridad y normativas de confidencialidad aplicables.</p><p><strong>2. Uso de Información:</strong> Los datos recopilados a través de nuestros formularios y canales oficiales (incluyendo jpescudolegal@gmail.com) se utilizan exclusivamente para fines de análisis financiero, asesoría de mediación y estructuración de planes de alivio de deudas.</p><p><strong>3. Exención de Representación Judicial:</strong> Debt Solutions opera como un servicio especializado de asesoría, cálculo financiero y mediación extrajudicial con acreedores. No constituimos un bufete de abogados ni brindamos representación contenciosa en tribunales.</p>",
-                legalModalBtn: "Entendido"
+                legalTitle: "Políticas de Privacidad y Cumplimiento Legal",
+                legalBody: "<strong>1. Confidencialidad y Privacidad de Datos:</strong> En Debt Solutions nos comprometemos a proteger estrictamente toda la información proporcionada por nuestros clientes bajo estándares rigurosos de seguridad y normativas de confidencialidad aplicables.<br><br><strong>2. Uso de Información:</strong> Los datos recopilados a través de nuestros formularios y canales oficiales (incluyendo jpescudolegal@gmail.com) se utilizan exclusivamente para fines de análisis financiero, asesoría de mediación y estructuración de planes de alivio de deudas.<br><br><strong>3. Exención de Representación Judicial:</strong> Debt Solutions opera como un servicio especializado de asesoría, cálculo financiero y mediación extrajudicial con acreedores. No constituimos un bufete de abogados ni brindamos representación contenciosa en tribunales.",
+                legalClose: "Entendido"
             },
             en: {
                 pageTitle: "Debt Solutions - Professional Debt Relief & Mediation",
-                bannerText: "Weekly priority evaluation slots closing in:",
-                navSubtitle: "Legal & Financial Advisory",
+                urgencyBanner: "Weekly priority assessment slots closing in:",
+                subBrand: "Legal & Financial Advisory",
                 navCalc: "Calculator",
                 navPrograms: "Programs",
-                navReviews: "Success Stories",
+                navSuccess: "Success Stories",
                 navFaq: "FAQ",
                 navLegal: "Legal Compliance",
                 navCta: "Free Consultation",
                 heroBadge: "100% Confidential Legal Protection & Mediation",
                 heroTitle1: "Restructure Your Debt",
                 heroTitle2: "with Expert Guidance",
-                heroDesc: "Lower your monthly payments by up to 50%, stop collection calls, and restructure your debts with an expert plan tailored to your real budget.",
-                heroBtn1: "Check My Eligibility",
-                heroBtn2: "Simulate Interactive Validation",
-                stat1: "Debt Restructured",
-                stat2: "Families Assisted",
-                stat3: "Satisfaction Rate",
+                heroDesc: "Reduce your monthly payments by up to 50%, stop collector harassment, and restructure your debt with an expert plan tailored to your real budget.",
+                heroCta1: "Check My Eligibility",
+                heroCta2: "Simulate Interactive Validation",
+                stat1: "Restructured Debt",
+                stat2: "Assisted Families",
+                stat3: "Satisfaction",
                 formBadge: "Confidential Intake",
                 formTitle: "Request Your Free Analysis",
-                formSubtitle: "Takes less than 1 minute. Zero impact on your credit score.",
+                formSub: "Takes less than 1 minute. Zero impact on your credit.",
                 trust1: "HIPAA Confidentiality",
-                trust2: "256-Bit Bank SSL Encryption",
+                trust2: "SSL Bank-Grade Encryption",
                 trust3: "Certified Advisory",
-                trust4: "A+ Rated Excellence",
+                trust4: "A+ Excellent Rating",
                 calcBadge: "Financial Simulator",
                 calcTitle: "Savings Calculator",
-                calcSubtitle: "Adjust the sliders to visualize your estimated new monthly payment through our programs.",
-                calcLabel1: "Total Unsecured Debt",
-                calcLabel2: "Estimated Current Monthly Payment",
-                calcLabel3: "Primary Financial Hardship",
+                calcSub: "Adjust the values to visualize your estimated new monthly payment through our programs.",
+                labelDebt: "Total Unsecured Debt",
+                labelCurrentPay: "Estimated Current Monthly Payment",
+                labelHardship: "Main Financial Hardship",
                 opt1: "High credit card interest rates",
                 opt2: "Temporary income reduction",
-                opt3: "Accumulated medical expenses",
+                opt3: "Accumulation of medical bills",
                 opt4: "Inability to cover minimum payments",
-                resBadge: "Estimated Projection",
+                resHeader: "Estimated Projection",
                 resNewPay: "New Estimated Monthly Payment",
                 resSaveText: "Approx. savings of",
-                resSaveMonth: "per month",
-                resReduct: "Balance Reduction",
-                resReductVal: "Up to 50%",
-                resTerm: "Estimated Term",
-                resTermVal: "24 - 48 Months",
+                resMonthly: "monthly",
+                resRed: "Balance Reduction",
+                resRedVal: "Up to 50%",
+                resTime: "Estimated Term",
+                resTimeVal: "24 - 48 Months",
                 resBtn: "Secure This Savings Projection",
                 progBadge: "Our Programs",
                 progTitle: "Specialized Solutions for Every Case",
-                progSubtitle: "We negotiate directly with your creditors to freeze interest and settle balances advantageously.",
+                progSub: "We negotiate directly with your creditors to freeze interest and settle balances advantageously.",
                 card1Title: "Mediation & Settlement",
-                card1Desc: "Direct agreements with creditors to reduce total debt owed by a significant fraction.",
+                card1Desc: "Direct agreements with creditors to reduce the total amount owed by a considerable fraction.",
                 card1Li1: "Real principal reduction",
                 card1Li2: "Definitive stop to collection calls",
                 card2Title: "Structured Consolidation",
                 card2Desc: "Group multiple scattered debts into a single predictable monthly payment with reduced interest rates.",
                 card2Li1: "Single unified monthly payment",
-                card2Li2: "Elimination of compounding interest",
+                card2Li2: "Elimination of cumulative interest",
                 card3Title: "Hardship Defense",
-                card3Desc: "Specialized guidance and legal protection against commercial lawsuits or severe creditor pressure.",
-                card3Li1: "Specialized shelter and advice",
-                card3Li2: "Personalized legal strategy",
+                card3Desc: "Specialized legal guidance and protection against commercial lawsuits or severe creditor pressure.",
+                card3Li1: "Specialized safeguards and advice",
+                card3Li2: "Customized legal strategy",
                 moreBtn: "Learn more",
-                revBadge: "Success Stories",
-                revTitle: "Real Stories of Financial Stability",
-                revSubtitle: "Discover how our clients eliminated tens of thousands in debt and regained peace of mind.",
-                rev1Text: "\"I was drowning in over $55,000 in credit cards and medical bills. Debt Solutions structured a plan that cut my payments in half. Excellent human treatment.\"",
-                rev1Sub: "Saved $31,000 • Puerto Rico",
-                rev2Text: "\"The guidance was impeccable and judgment-free. Collection calls stopped quickly and today I see the light at the end of the tunnel in an organized way.\"",
-                rev2Sub: "Saved $24,500 • Florida",
-                rev3Text: "\"I highly recommend their services. Absolute professionalism and a team committed to getting you out of debt the fairest way possible.\"",
-                rev3Sub: "Saved $42,000 • California",
-                evalBadge: "100% Confidential Intake",
-                evalTitle: "Start Your Evaluation Process",
-                evalSubtitle: "Complete the official intake form so our team can analyze your case privately.",
+                testBadge: "Success Stories",
+                testTitle: "Real Stability Stories",
+                testSub: "Learn how our clients eliminated tens of thousands in debt and regained their peace of mind.",
+                test1Text: "\"I was drowning in over $55,000 in credit cards and medical bills. Debt Solutions structured a plan that cut my payments in half. Excellent human care.\"",
+                test1Sub: "Saved $31,000 • Puerto Rico",
+                test2Text: "\"The guidance was flawless and non-judgmental. Collection calls stopped quickly and today I see the light at the end of the tunnel in an organized way.\"",
+                test2Sub: "Saved $24,500 • Florida",
+                test3Text: "\"I highly recommend their services. Absolute professionalism and a team committed to getting you out of debt the fairest way possible.\"",
+                test3Sub: "Saved $42,000 • California",
+                secBadge: "100% Confidential Intake",
+                secTitle: "Start Your Evaluation Process",
+                secSub: "Complete the official intake form so our team can privately review your case.",
                 faqBadge: "Common Questions",
                 faqTitle: "Frequently Asked Questions",
-                faqSubtitle: "Search terms or review clear answers regarding our mediation processes.",
+                faqSub: "Search terms or review clear answers regarding our mediation processes.",
                 faqPlaceholder: "Search question (e.g. credit, cost, debt)...",
                 faq1Q: "Does debt mediation affect my credit score?",
-                faq1A: "The debt negotiation process involves an agreement with creditors that may cause a temporary credit impact, but it allows you to resolve financial commitments in a fraction of the stipulated time, enabling a solid future recovery.",
+                faq1A: "The debt negotiation process involves an agreement with creditors that may generate a temporary impact on credit, but it allows you to resolve financial commitments in a fraction of the stipulated time, enabling a strong recovery ahead.",
                 faq2Q: "How much does the initial evaluation consultation cost?",
-                faq2A: "The consultation and initial analysis of your debt profile are 100% free and obligation-free. Our goal is to offer you transparency before making any decisions.",
-                faq3Q: "What types of debts qualify for the program?",
-                faq3A: "We handle unsecured debts such as credit cards, personal loans, lines of credit, and past-due medical bills. Secured debts like mortgages and auto loans are not included.",
-                footerDesc: "Helping individuals regain financial stability through expert counseling and transparent, ethical debt mediation.",
-                footerProg: "Programs",
+                faq2A: "The consultation and initial analysis of your debt profile are 100% free and commitment-free. Our goal is to offer you transparency before making any decisions.",
+                faq3Q: "What types of debt qualify for the program?",
+                faq3A: "We handle unsecured debts such as credit cards, personal loans, lines of credit, and past-due medical bills. Secured debts (mortgages and autos) are not included in this category.",
+                footerDesc: "Helping people regain financial stability through expert guidance and ethical, transparent debt mediation.",
+                footerPrograms: "Programs",
+                prog1: "Mediation & Settlement",
+                prog2: "Structured Consolidation",
+                prog3: "Hardship Defense",
+                prog4: "Savings Simulator",
                 footerContact: "Professional Contact",
-                footerNotice: "Legal Notice: Debt Solutions is a consultation, financial advisory, and debt mediation service. Results vary based on the client's particular situation, total debt volume, and institutional creditor cooperation. We do not assume direct obligations or provide court litigation legal representation services.",
+                footerNotice: "Disclaimer: Debt Solutions is a consultation, financial advisory, and debt mediation service. Results vary based on the client's particular situation, total debt volume, and the cooperation of institutional creditors. We do not assume direct obligations or provide legal representation services in courts.",
                 footerRights: "All rights reserved.",
-                footerLegalLink: "Privacy & Compliance Policies",
+                footerPrivacy: "Privacy & Compliance Policies",
+                mobileCta: "Free Consultation",
                 modalTitle: "Express Profile Validation",
-                modalSubtitle: "Interactive pre-qualification simulation for Debt Solutions.",
-                modalLabel1: "Estimated Debt Amount",
-                modalLabel2: "Contact Email",
+                modalSub: "Interactive pre-qualification simulation for Debt Solutions.",
+                modalLbl1: "Estimated Debt Amount",
+                modalLbl2: "Contact Email",
                 modalBtn: "Validate Eligibility Now",
                 modalSuccess: "Profile eligible for restructuring! Redirecting to official intake...",
-                legalModalTitle: "Privacy Policies & Legal Compliance",
-                legalModalContent: "<p><strong>1. Data Confidentiality & Privacy:</strong> At Debt Solutions we are committed to strictly protecting all information provided by our clients under rigorous security standards and applicable confidentiality regulations.</p><p><strong>2. Information Usage:</strong> Data collected through our forms and official channels (including jpescudolegal@gmail.com) is used exclusively for financial analysis, mediation advisory, and debt relief plan structuring.</p><p><strong>3. Judicial Representation Exemption:</strong> Debt Solutions operates as a specialized advisory, financial calculation, and extrajudicial creditor mediation service. We do not constitute a law firm nor provide contentious court representation.</p>",
-                legalModalBtn: "Understood"
+                legalTitle: "Privacy Policy & Legal Compliance",
+                legalBody: "<strong>1. Confidentiality and Data Privacy:</strong> At Debt Solutions we are committed to strictly protecting all information provided by our clients under rigorous security standards and applicable confidentiality regulations.<br><br><strong>2. Use of Information:</strong> Data collected through our forms and official channels (including jpescudolegal@gmail.com) is used exclusively for financial analysis, mediation advisory, and structuring debt relief plans.<br><br><strong>3. Exemption from Judicial Representation:</strong> Debt Solutions operates as a specialized advisory, financial calculation, and extrajudicial creditor mediation service. We do not constitute a law firm nor do we provide contentious courtroom representation.",
+                legalClose: "Understood"
             }
         };
 
         let currentLang = 'es';
-
         function toggleLanguage() {
             currentLang = currentLang === 'es' ? 'en' : 'es';
             document.getElementById('htmlRoot').setAttribute('lang', currentLang);
             
-            // Traducir todos los elementos con data-translate-key
-            document.querySelectorAll('[data-translate-key]').forEach(el => {
+            const elements = document.querySelectorAll('[data-translate-key]');
+            elements.forEach(el => {
                 const key = el.getAttribute('data-translate-key');
-                if (translations[currentLang][key]) {
-                    el.innerHTML = translations[currentLang][key];
-                }
-            });
-
-            // Traducir inputs con placeholder
-            document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
-                const key = el.getAttribute('data-translate-placeholder');
-                if (translations[currentLang][key]) {
-                    el.setAttribute('placeholder', translations[currentLang][key]);
+                if(translations[currentLang][key]) {
+                    if(el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
+                        el.placeholder = translations[currentLang][key];
+                    } else {
+                        el.innerHTML = translations[currentLang][key];
+                    }
                 }
             });
         }
 
+        // Lógica de la calculadora interactiva
         function updateCalculator() {
             const debt = parseInt(document.getElementById('debtSlider').value);
             const currentPay = parseInt(document.getElementById('paymentSlider').value);
+
             const newPay = Math.round(debt * 0.0125); 
             const monthlySave = currentPay - newPay;
 
             document.getElementById('debtValDisplay').innerText = '$' + debt.toLocaleString();
             document.getElementById('currentPayDisplay').innerText = '$' + currentPay.toLocaleString();
-            document.getElementById('newPayDisplay').innerHTML = '$' + newPay.toLocaleString() + ` <span class="text-xs font-normal text-slate-300">/${currentLang === 'es' ? 'mes' : 'mo'}</span>`;
+            document.getElementById('newPayDisplay').innerHTML = '$' + newPay.toLocaleString() + ' <span class="text-xs font-normal text-slate-300">/mes</span>';
             document.getElementById('monthlySaveDisplay').innerText = '$' + Math.max(0, monthlySave).toLocaleString();
         }
 
+        // Alternar Preguntas Frecuentes (FAQ)
         function toggleFaq(id) {
             const content = document.getElementById('faqContent' + id);
             const icon = document.getElementById('faqIcon' + id);
+            
             if (content.classList.contains('hidden')) {
                 content.classList.remove('hidden');
                 icon.style.transform = 'rotate(180deg)';
@@ -883,15 +894,18 @@
             }
         }
 
+        // Búsqueda en tiempo real para FAQ
         function filterFaq() {
             const input = document.getElementById('faqSearch').value.toLowerCase();
             const items = document.getElementsByClassName('faq-item');
+            
             for (let i = 0; i < items.length; i++) {
                 const text = items[i].innerText.toLowerCase();
                 items[i].style.display = text.includes(input) ? "" : "none";
             }
         }
 
+        // Modal interactivo
         function openInteractiveModal() {
             document.getElementById('interactiveModal').classList.remove('hidden');
         }
@@ -901,9 +915,9 @@
         }
         function simulateSuccessModal() {
             const email = document.getElementById('modalEmail').value;
-            if(!email) { 
-                alert(currentLang === 'es' ? 'Por favor introduce un correo válido.' : 'Please enter a valid email.'); 
-                return; 
+            if(!email) {
+                alert(currentLang === 'es' ? 'Por favor introduce un correo válido.' : 'Please enter a valid email.');
+                return;
             }
             document.getElementById('modalSuccessMsg').classList.remove('hidden');
             confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
@@ -913,6 +927,7 @@
             }, 2000);
         }
 
+        // Modal Legal
         function openLegalModal() {
             document.getElementById('legalModal').classList.remove('hidden');
         }
@@ -920,6 +935,7 @@
             document.getElementById('legalModal').classList.add('hidden');
         }
 
+        // Contador regresivo visual de urgencia
         let time = 48 * 3600;
         setInterval(() => {
             let hours = Math.floor(time / 3600);
@@ -934,4 +950,3 @@
     </script>
 </body>
 </html>
-```[web_code_canvas: index.html]
