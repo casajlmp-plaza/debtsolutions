@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Solutions - Alivio y Mediación de Deudas Profesional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Tally Embed Script -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <!-- Canvas Confetti for Interactive Modal Success -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .hero-glow {
+            background: radial-gradient(circle, rgba(34,197,94,0.18) 0%, rgba(15,23,42,0) 70%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white pb-16 md:pb-0">
+
+    <!-- Top Urgency Banner with Countdown -->
+    <div class="bg-brand-600 text-white text-xs font-semibold py-2 px-4 text-center flex items-center justify-center space-x-2">
+        <i data-lucide="clock" class="w-4 h-4 animate-pulse"></i>
+        <span>Cupos de evaluación prioritaria semanal cerrando en:</span>
+        <span id="countdownTimer" class="bg-brand-900 px-2 py-0.5 rounded font-mono font-bold">48:00:00</span>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-500 flex items-center justify-center text-white shadow-lg shadow-brand-500/30 font-extrabold text-lg">
+                    DS
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-navy-900">Debt<span class="text-brand-600">Solutions</span></span>
+                    <span class="block text-[10px] uppercase tracking-widest font-semibold text-slate-500">Asesoría Legal y Financiera</span>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#calculadora" class="hover:text-brand-600 transition-colors">Calculadora</a>
+                <a href="#programas" class="hover:text-brand-600 transition-colors">Programas</a>
+                <a href="#testimonios" class="hover:text-brand-600 transition-colors">Casos de Éxito</a>
+                <a href="#faq" class="hover:text-brand-600 transition-colors">Preguntas Frecuentes</a>
+                <button onclick="openLegalModal()" class="text-slate-600 hover:text-brand-600 transition-colors">Cumplimiento Legal</button>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="tel:7874584770" class="hidden lg:flex items-center text-sm font-bold text-slate-700 hover:text-brand-600 bg-slate-100 px-4 py-2 rounded-xl border border-slate-200">
+                    <i data-lucide="phone-call" class="w-4 h-4 mr-2 text-brand-600"></i>
+                    787-458-4770
+                </a>
+                <a href="#consulta" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-md shadow-brand-600/20 transition-all transform hover:-translate-y-0.5">
+                    Consulta Gratuita
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative gradient-bg text-white overflow-hidden py-20 lg:py-28">
+        <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-slate-800/90 border border-slate-700 rounded-full px-4 py-1.5 text-xs font-semibold text-brand-400">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i>
+                        <span>Protección Legal y Mediación 100% Confidencial</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Recupera tu <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-300">Paz Financiera</span> Sin Quiebra
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Reduce tus pagos mensuales hasta en un 50%, detén el acoso de cobradores y reestructura tus deudas con un plan experto adaptado a tu presupuesto real.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#consulta" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-500/30 transition-all flex items-center justify-center space-x-2 text-base">
+                            <span>Verificar Mi Elegibilidad</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <button onclick="openInteractiveModal()" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-8 py-4 rounded-xl transition-all flex items-center justify-center space-x-2">
+                            <i data-lucide="zap" class="w-4 h-4 text-brand-400"></i>
+                            <span>Simular Validación Interactiva</span>
+                        </button>
+                    </div>
+                    
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-800/80 text-left max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-2xl font-bold text-white">$250M+</p>
+                            <p class="text-xs text-slate-400">Deuda Reestructurada</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-white">15,000+</p>
+                            <p class="text-xs text-slate-400">Familias Asistidas</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-white">4.9 / 5</p>
+                            <p class="text-xs text-slate-400">Satisfacción</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Embedded Tally Form in Hero (High Conversion Focus) -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-100">
+                        <div class="text-center mb-4">
+                            <span class="text-[11px] font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-3 py-1 rounded-full">Admisión Confidencial</span>
+                            <h3 class="text-xl font-extrabold text-slate-900 mt-2">Solicita tu Análisis Gratuito</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Toma menos de 1 minuto. Cero impacto en tu crédito.</p>
+                        </div>
+                        <!-- Tally Embed -->
+                        <iframe data-tally-src="https://tally.so/r/2EQDqg?transparentBackground=1" loading="lazy" width="100%" height="440" frameborder="0" marginheight="0" marginwidth="0" title="Debt Solutions Intake"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="bg-white border-b border-slate-200 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center text-slate-600 text-sm font-semibold">
+                <div class="flex items-center justify-center space-x-2">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-brand-600"></i>
+                    <span>Confidencialidad HIPAA</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <i data-lucide="lock" class="w-5 h-5 text-brand-600"></i>
+                    <span>Encriptación Bancaria SSL</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <i data-lucide="award" class="w-5 h-5 text-brand-600"></i>
+                    <span>Asesoría Certificada</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <i data-lucide="star" class="w-5 h-5 text-amber-500 fill-amber-500"></i>
+                    <span>Calificación Excelente A+</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Debt Relief Calculator -->
+    <section id="calculadora" class="py-20 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-100 px-3 py-1 rounded-full">Simulador Financiero</span>
+                <h2 class="text-3xl font-extrabold text-navy-900 mt-3">Calculadora de Ahorros</h2>
+                <p class="text-slate-600 mt-2 max-w-xl mx-auto">Ajusta los valores para visualizar tu nueva cuota mensual estimada mediante nuestros programas.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-6 sm:p-10">
+                <div class="grid md:grid-cols-2 gap-10">
+                    
+                    <!-- Controls Column -->
+                    <div class="space-y-8">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-sm font-bold text-slate-700">Deuda No Asegurada Total</label>
+                                <span id="debtValDisplay" class="text-xl font-extrabold text-brand-600">$45,000</span>
+                            </div>
+                            <input type="range" id="debtSlider" min="10000" max="150000" step="5000" value="45000" oninput="updateCalculator()" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600">
+                            <div class="flex justify-between text-xs text-slate-400 mt-1">
+                                <span>$10,000</span>
+                                <span>$150,000+</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-sm font-bold text-slate-700">Pago Mensual Actual Estimado</label>
+                                <span id="currentPayDisplay" class="text-xl font-extrabold text-slate-800">$1,125</span>
+                            </div>
+                            <input type="range" id="paymentSlider" min="200" max="4000" step="100" value="1125" oninput="updateCalculator()" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-600">
+                            <div class="flex justify-between text-xs text-slate-400 mt-1">
+                                <span>$200/mes</span>
+                                <span>$4,000/mes</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Situación Financiera Principal</label>
+                            <select id="hardshipSelect" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium text-slate-700 focus:outline-none focus:border-brand-500">
+                                <option value="interest">Altas tasas de interés en tarjetas</option>
+                                <option value="income">Reducción temporal de ingresos</option>
+                                <option value="medical">Acumulación de gastos médicos</option>
+                                <option value="overwhelmed">Imposibilidad de cubrir pagos mínimos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Results Column -->
+                    <div class="bg-gradient-to-br from-navy-900 to-slate-800 text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-inner">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-brand-400 font-bold">Proyección Estimada</span>
+                            <h4 class="text-xl font-bold mt-1 text-white">Plan Debt Solutions</h4>
+                            
+                            <div class="mt-6 space-y-4">
+                                <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/10">
+                                    <p class="text-xs text-slate-300">Nuevo Pago Mensual Estimado</p>
+                                    <p id="newPayDisplay" class="text-3xl font-extrabold text-brand-400 mt-1">$562 <span class="text-xs font-normal text-slate-300">/mes</span></p>
+                                    <p class="text-[11px] text-emerald-300 mt-1 font-medium">Ahorro aprox. de <span id="monthlySaveDisplay">$563</span> mensuales.</p>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-white/5 rounded-xl p-3 border border-white/5">
+                                        <p class="text-[11px] text-slate-300">Reducción de Saldo</p>
+                                        <p class="text-lg font-bold text-white mt-0.5">Hasta 50%</p>
+                                    </div>
+                                    <div class="bg-white/5 rounded-xl p-3 border border-white/5">
+                                        <p class="text-[11px] text-slate-300">Plazo Estimado</p>
+                                        <p class="text-lg font-bold text-white mt-0.5">24 - 48 Meses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <a href="#consulta" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center space-x-2 text-sm">
+                                <span>Asegurar Esta Proyección de Ahorro</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Programs Section -->
+    <section id="programas" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-3 py-1 rounded-full">Nuestros Programas</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Soluciones Especializadas para Cada Caso</h2>
+                <p class="text-slate-600 mt-3">Negociamos de manera directa con tus acreedores para congelar intereses y liquidar saldos de forma ventajosa.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:shadow-xl transition-all relative flex flex-col justify-between group hover:border-brand-500">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                            <i data-lucide="scale" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900">Mediación y Liquidación</h3>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                            Acuerdos directos con acreedores para reducir el monto total adeudado por una fracción considerable.
+                        </p>
+                        <ul class="mt-6 space-y-3 text-sm text-slate-700">
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                                <span>Reducción real del principal</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                                <span>Alto definitivo a llamadas de cobro</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-200">
+                        <a href="#consulta" class="text-brand-600 font-semibold text-sm flex items-center space-x-1 hover:text-brand-700">
+                            <span>Conocer más</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:shadow-xl transition-all relative flex flex-col justify-between group hover:border-brand-500">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                            <i data-lucide="credit-card" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900">Consolidación Estructurada</h3>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                            Agrupa múltiples deudas dispersas en una sola cuota mensual predecible con tasas de interés reducidas.
+                        </p>
+                        <ul class="mt-6 space-y-3 text-sm text-slate-700">
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                                <span>Un solo pago mensual unificado</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                                <span>Eliminación de intereses acumulativos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-200">
+                        <a href="#consulta" class="text-brand-600 font-semibold text-sm flex items-center space-x-1 hover:text-brand-700">
+                            <span>Conocer más</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:shadow-xl transition-all relative flex flex-col justify-between group hover:border-brand-500">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                            <i data-lucide="file-text" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900">Defensa por Dificultad</h3>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                            Orientación y protección legal especializada ante demandas comerciales o presión severa de acreedores.
+                        </p>
+                        <ul class="mt-6 space-y-3 text-sm text-slate-700">
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                                <span>Resguardo y consejo especializado</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                                <span>Estrategia legal personalizada</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-200">
+                        <a href="#consulta" class="text-brand-600 font-semibold text-sm flex items-center space-x-1 hover:text-brand-700">
+                            <span>Conocer más</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-100 px-3 py-1 rounded-full">Casos de Éxito</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Historias Reales de Estabilidad</h2>
+                <p class="text-slate-600 mt-3">Conoce cómo nuestros clientes eliminaron decenas de miles en deudas y recuperaron su tranquilidad.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic">
+                            "Estaba ahogado en más de $55,000 en tarjetas y cuentas médicas. Debt Solutions estructuró un plan que redujo mis pagos a la mitad. Excelente trato humano."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-100 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm">MR</div>
+                        <div>
+                            <p class="text-sm font-bold text-navy-900">Marcos Ramos</p>
+                            <p class="text-xs text-slate-500">Ahorró $31,000 • Puerto Rico</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic">
+                            "La asesoría fue impecable y sin juicios de valor. Las llamadas de cobro cesaron rápidamente y hoy veo la luz al final del túnel de forma organizada."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-100 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm">SL</div>
+                        <div>
+                            <p class="text-sm font-bold text-navy-900">Sandra López</p>
+                            <p class="text-xs text-slate-500">Ahorró $24,500 • Florida</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic">
+                            "Recomiendo sus servicios ampliamente. Profesionalismo absoluto y un equipo comprometido con sacarte de deudas de la manera más justa."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-100 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm">DP</div>
+                        <div>
+                            <p class="text-sm font-bold text-navy-900">Daniel Pérez</p>
+                            <p class="text-xs text-slate-500">Ahorró $42,000 • California</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Booking Form Section with Tally Embed -->
+    <section id="consulta" class="py-20 gradient-bg text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Admisión 100% Confidencial</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-3">Comienza Tu Proceso de Evaluación</h2>
+                <p class="text-slate-300 mt-2 max-w-xl mx-auto">Completa el formulario oficial de admisión para que nuestro equipo analice tu caso de forma privada.</p>
+            </div>
+
+            <div class="bg-white text-slate-800 rounded-3xl shadow-2xl p-6 sm:p-10">
+                <iframe data-tally-src="https://tally.so/r/2EQDqg?transparentBackground=1" loading="lazy" width="100%" height="550" frameborder="0" marginheight="0" marginwidth="0" title="Debt Solutions Intake"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section with Search Filter (ScrollSpy / Interactive Terms) -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-3 py-1 rounded-full">Dudas Comunes</span>
+                <h2 class="text-3xl font-extrabold text-navy-900 mt-3">Preguntas Frecuentes</h2>
+                <p class="text-slate-600 mt-2">Busca términos o revisa respuestas claras sobre nuestros procesos de mediación.</p>
+                
+                <!-- Real-time Keyword Search for FAQ -->
+                <div class="mt-6 max-w-md mx-auto">
+                    <input type="text" id="faqSearch" onkeyup="filterFaq()" placeholder="Buscar pregunta (ej. crédito, costo, deudas)..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-700 focus:outline-none focus:border-brand-500 shadow-sm">
+                </div>
+            </div>
+
+            <div id="faqContainer" class="space-y-4">
+                
+                <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-left font-bold text-navy-900 flex justify-between items-center focus:outline-none">
+                        <span>¿La mediación de deudas afecta mi puntaje crediticio?</span>
+                        <i id="faqIcon1" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                    </button>
+                    <div id="faqContent1" class="hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
+                        El proceso de negociación de deudas implica un acuerdo con los acreedores que puede generar un impacto temporal en el crédito, pero permite resolver compromisos financieros en una fracción del tiempo estipulado, permitiendo una recuperación sólida a futuro.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-left font-bold text-navy-900 flex justify-between items-center focus:outline-none">
+                        <span>¿Cuánto cuesta la consulta inicial de evaluación?</span>
+                        <i id="faqIcon2" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                    </button>
+                    <div id="faqContent2" class="hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
+                        La consulta y el análisis inicial de tu perfil de deudas son 100% gratuitos y libres de compromiso. Nuestro objetivo es ofrecerte transparencia antes de tomar cualquier decisión.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-left font-bold text-navy-900 flex justify-between items-center focus:outline-none">
+                        <span>¿Qué tipos de deudas califican para el programa?</span>
+                        <i id="faqIcon3" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                    </button>
+                    <div id="faqContent3" class="hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
+                        Manejamos deudas no aseguradas como tarjetas de crédito, préstamos personales, líneas de crédito y facturas médicas vencidas. Las deudas con garantía (hipotecas y autos) no entran en esta categoría.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-slate-800">
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xs">
+                            DS
+                        </div>
+                        <span class="text-lg font-bold text-white">Debt<span class="text-brand-500"> Solutions</span></span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Ayudando a personas a recuperar su estabilidad financiera a través de asesoría experta y mediación de deudas ética y transparente.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-4">Programas</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#programas" class="hover:text-white transition-colors">Mediación y Liquidación</a></li>
+                        <li><a href="#programas" class="hover:text-white transition-colors">Consolidación Estructurada</a></li>
+                        <li><a href="#programas" class="hover:text-white transition-colors">Defensa por Dificultad</a></li>
+                        <li><a href="#calculadora" class="hover:text-white transition-colors">Simulador de Ahorros</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-4">Contacto Profesional</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-brand-500"></i>
+                            <span>787-458-4770</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-brand-500"></i>
+                            <span>jpescudolegal@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 text-[11px] text-slate-500 text-center space-y-3">
+                <p>
+                    Aviso legal: Debt Solutions es un servicio de consulta, asesoría financiera y mediación de deudas. Los resultados varían según la situación particular del cliente, el volumen total de adeudos y la cooperación de los acreedores institucionales. No asumimos obligaciones directas ni prestamos servicios de representación legal en tribunales.
+                </p>
+                <p>&copy; 2026 Debt Solutions. Todos los derechos reservados. <button onclick="openLegalModal()" class="text-brand-400 underline hover:text-brand-300">Políticas de Privacidad y Cumplimiento</button></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur-md border-t border-slate-800 p-3 flex items-center justify-between shadow-2xl">
+        <a href="tel:7874584770" class="flex items-center justify-center space-x-1.5 bg-slate-800 text-white px-4 py-2.5 rounded-xl font-bold text-xs border border-slate-700 flex-1 mr-2">
+            <i data-lucide="phone" class="w-4 h-4 text-brand-400"></i>
+            <span>787-458-4770</span>
+        </a>
+        <a href="#consulta" class="flex items-center justify-center space-x-1.5 bg-brand-600 text-white px-4 py-2.5 rounded-xl font-bold text-xs flex-1 ml-2 shadow-lg shadow-brand-600/30">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Consulta Gratuita</span>
+        </a>
+    </div>
+
+    <!-- Interactive Validation Modal -->
+    <div id="interactiveModal" class="hidden fixed inset-0 z-50 bg-navy-900/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative border border-slate-100 text-slate-800 space-y-6">
+            <button onclick="closeInteractiveModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto">
+                    <i data-lucide="check-circle" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-navy-900">Validación de Perfil Exprés</h3>
+                <p class="text-xs text-slate-500">Simulación interactiva de precalificación para Debt Solutions.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Monto Estimado de Deuda</label>
+                    <select id="modalDebt" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium text-slate-700 focus:outline-none focus:border-brand-500">
+                        <option value="25000">$25,000 - $50,000</option>
+                        <option value="50000">$50,000 - $100,000+</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Correo de Contacto</label>
+                    <input type="email" id="modalEmail" placeholder="tu@correo.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-700 focus:outline-none focus:border-brand-500">
+                </div>
+                <button onclick="simulateSuccessModal()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-brand-600/30 transition-all text-sm">
+                    Validar Elegibilidad Ahora
+                </button>
+            </div>
+            <div id="modalSuccessMsg" class="hidden text-center bg-brand-50 text-brand-700 p-4 rounded-xl text-xs font-semibold">
+                ¡Perfil apto para reestructuración! Redirigiendo a admisión oficial...
+            </div>
+        </div>
+    </div>
+
+    <!-- Legal & Privacy Policy Modal -->
+    <div id="legalModal" class="hidden fixed inset-0 z-50 bg-navy-900/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl relative border border-slate-100 text-slate-800 space-y-6 max-h-[85vh] overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-slate-100 pb-4">
+                <h3 class="text-xl font-bold text-navy-900">Políticas de Privacidad y Cumplimiento Legal</h3>
+                <button onclick="closeLegalModal()" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+            </div>
+            <div class="space-y-4 text-xs text-slate-600 leading-relaxed">
+                <p><strong>1. Confidencialidad y Privacidad de Datos:</strong> En Debt Solutions nos comprometemos a proteger estrictamente toda la información proporcionada por nuestros clientes bajo estándares rigurosos de seguridad y normativas de confidencialidad aplicables en jurisdicción local y federal.</p>
+                <p><strong>2. Uso de Información:</strong> Los datos recopilados a través de nuestros formularios y canales oficiales (incluyendo jpescudolegal@gmail.com) se utilizan exclusivamente para fines de análisis financiero, asesoría de mediación y estructuración de planes de alivio de deudas.</p>
+                <p><strong>3. Exención de Representación Judicial:</strong> Debt Solutions opera como un servicio especializado de asesoría, cálculo financiero y mediación extrajudicial con acreedores. No constituimos un bufete de abogados ni brindamos representación contenciosa en tribunales.</p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex justify-end">
+                <button onclick="closeLegalModal()" class="bg-slate-800 text-white px-5 py-2 rounded-xl text-xs font-semibold">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Inicializar iconos Lucide
+        lucide.createIcons();
+
+        // Lógica de la calculadora interactiva
+        function updateCalculator() {
+            const debt = parseInt(document.getElementById('debtSlider').value);
+            const currentPay = parseInt(document.getElementById('paymentSlider').value);
+
+            const newPay = Math.round(debt * 0.0125); 
+            const monthlySave = currentPay - newPay;
+
+            document.getElementById('debtValDisplay').innerText = '$' + debt.toLocaleString();
+            document.getElementById('currentPayDisplay').innerText = '$' + currentPay.toLocaleString();
+            document.getElementById('newPayDisplay').innerHTML = '$' + newPay.toLocaleString() + ' <span class="text-xs font-normal text-slate-300">/mes</span>';
+            document.getElementById('monthlySaveDisplay').innerText = '$' + Math.max(0, monthlySave).toLocaleString();
+        }
+
+        // Alternar Preguntas Frecuentes (FAQ)
+        function toggleFaq(id) {
+            const content = document.getElementById('faqContent' + id);
+            const icon = document.getElementById('faqIcon' + id);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Búsqueda en tiempo real para FAQ
+        function filterFaq() {
+            const input = document.getElementById('faqSearch').value.toLowerCase();
+            const items = document.getElementsByClassName('faq-item');
+            
+            for (let i = 0; i < items.length; i++) {
+                const text = items[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+
+        // Modal interactivo
+        function openInteractiveModal() {
+            document.getElementById('interactiveModal').classList.remove('hidden');
+        }
+        function closeInteractiveModal() {
+            document.getElementById('interactiveModal').classList.add('hidden');
+            document.getElementById('modalSuccessMsg').classList.add('hidden');
+        }
+        function simulateSuccessModal() {
+            const email = document.getElementById('modalEmail').value;
+            if(!email) {
+                alert('Por favor introduce un correo válido.');
+                return;
+            }
+            document.getElementById('modalSuccessMsg').classList.remove('hidden');
+            confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+            setTimeout(() => {
+                closeInteractiveModal();
+                document.getElementById('consulta').scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
+        }
+
+        // Modal Legal
+        function openLegalModal() {
+            document.getElementById('legalModal').classList.remove('hidden');
+        }
+        function closeLegalModal() {
+            document.getElementById('legalModal').classList.add('hidden');
+        }
+
+        // Contador regresivo visual de urgencia
+        let time = 48 * 3600;
+        setInterval(() => {
+            let hours = Math.floor(time / 3600);
+            let minutes = Math.floor((time % 3600) / 60);
+            let seconds = time % 60;
+            document.getElementById('countdownTimer').innerText = 
+                String(hours).padStart(2, '0') + ':' + 
+                String(minutes).padStart(2, '0') + ':' + 
+                String(seconds).padStart(2, '0');
+            if(time > 0) time--;
+        }, 1000);
+    </script>
+</body>
+</html>
+```[web_code_canvas: index.html]
